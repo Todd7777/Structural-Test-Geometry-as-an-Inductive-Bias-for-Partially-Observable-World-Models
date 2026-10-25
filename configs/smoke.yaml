@@ -1,0 +1,15 @@
+method: QP
+seed: 10
+steps: 3
+batch_size: 4
+auxiliary_batch_size: 8
+clusters: 4
+deterministic_dim: 24
+stochastic_dim: 8
+hidden_dim: 32
+learning_rate: 0.0003
+auxiliary_weight: null
+kl_weight: 0.1
+gradient_clip: 100.0
+threads: 2
+device: cpu

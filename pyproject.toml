@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "structural-test-geometry-reference"
+version = "0.1.0"
+description = "Post-acceptance reference implementation of structural-test geometry objectives"
+requires-python = ">=3.11"
+authors = [{name = "Todd Y. Zhou"}]
+dependencies = ["numpy>=2,<3", "scipy>=1.15,<2", "torch>=2.5,<3", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+stg = "stg.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["stg*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
